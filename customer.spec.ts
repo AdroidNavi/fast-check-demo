@@ -2,7 +2,7 @@ import {Customer} from './customer';
 
 describe('Customer normal version', () => {
   describe('isAllowedToBuyAlcohol', () => {
-    it('true, 18+', () => {
+    it('true', () => {
       const customer = new Customer('Arnold', 18, [
         'Video games',
         'Develop software',
@@ -10,7 +10,7 @@ describe('Customer normal version', () => {
       expect(customer.isAllowedToBuyAlcohol()).toEqual(true);
     });
 
-    it('false, 17-', () => {
+    it('false', () => {
       const customer = new Customer('Harry', 17, ['Magic', 'Quidditch']);
       expect(customer.isAllowedToBuyAlcohol()).toEqual(false);
     });

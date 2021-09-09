@@ -4,7 +4,7 @@ import {Customer} from "./customer";
 
 describe("Customer fast-check version", () => {
   describe('isAllowedToBuyAlcohol', () => {
-    it('true better version', () => {
+    it('true', () => {
       fc.assert(
         fc.property(
           fc.record({
@@ -21,7 +21,7 @@ describe("Customer fast-check version", () => {
       );
     });
 
-    it('false better version', () => {
+    it('false', () => {
       fc.assert(
         fc.property(
           fc.record({
