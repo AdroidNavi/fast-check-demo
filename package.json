@@ -4,8 +4,10 @@
   "description": "",
   "main": "customer.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "jesthelp": "jest --help"
+    "all-tests": "jest",
+    "fast-check-tests": "jest customer.fast-check.spec.ts",
+    "boundary-tests": "jest customer.spec.ts",
+    "format": "npx prettier --write ."
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,7 @@
     "@types/jest": "^27.0.1",
     "babel-jest": "^27.0.6",
     "fast-check": "^2.17.0",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "prettier": "^2.4.0"
   }
 }
