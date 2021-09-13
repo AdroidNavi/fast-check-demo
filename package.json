@@ -1,16 +1,11 @@
 {
   "name": "fast-check-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "customer.js",
   "scripts": {
     "all-tests": "jest",
     "fast-check-tests": "jest customer.fast-check.spec.ts",
     "boundary-tests": "jest customer.spec.ts",
     "format": "npx prettier --write ."
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
