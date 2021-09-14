@@ -11,7 +11,7 @@ const createArbitrary = (ageConstrains: IntegerConstraints) =>
 
 describe("Customer (fast-check)", () => {
   describe("isAllowedToBuyAlcohol", () => {
-    it("allowed", () => {
+    it("allows anyone 18 years and up", () => {
       fc.assert(
         fc.property(createArbitrary({ min: 18 }), (data) => {
           const customer = new Customer(data.name, data.age, data.hobbies);
@@ -21,7 +21,7 @@ describe("Customer (fast-check)", () => {
       );
     });
 
-    it("not allowed", () => {
+    it("rejects anyone younger than 17", () => {
       fc.assert(
         fc.property(createArbitrary({ max: 17 }), (data) => {
           const customer = new Customer(data.name, data.age, data.hobbies);
